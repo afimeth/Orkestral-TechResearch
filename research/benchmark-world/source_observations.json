@@ -1,0 +1,306 @@
+{
+  "scope": "PUBLIC_DOCUMENTATION_ONLY_NO_DATASET_PAYLOADS_OR_EXECUTION",
+  "assurance": "SELF_OBSERVED_NOT_INDEPENDENT_THIRD_PARTY_VALIDATION",
+  "sources": [
+    {
+      "benchmark_id": "mmlu",
+      "source_url": "https://github.com/hendrycks/test",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "4450500f923c49f1fb1dd3d99108a0bd9717b660",
+      "readme_url": "https://github.com/hendrycks/test/blob/4450500f923c49f1fb1dd3d99108a0bd9717b660/README.md",
+      "readme_sha256": "59e7d8e808141d3eb8ba02bf38a53db6237d73cbe91d4d823693ead1f8f75182",
+      "repository_license_url": "https://github.com/hendrycks/test/tree/4450500f923c49f1fb1dd3d99108a0bd9717b660"
+    },
+    {
+      "benchmark_id": "mmlu-pro",
+      "source_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "f418b116db00b065c2aea046518d8fcf74d39872",
+      "readme_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro/blob/f418b116db00b065c2aea046518d8fcf74d39872/README.md",
+      "readme_sha256": "dfbab62320e644f3682d4697e206160bbb59baafa324c59a17e4424328e3e5a5",
+      "repository_license_url": "https://github.com/TIGER-AI-Lab/MMLU-Pro/tree/f418b116db00b065c2aea046518d8fcf74d39872"
+    },
+    {
+      "benchmark_id": "gpqa",
+      "source_url": "https://github.com/idavidrein/gpqa",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "56686c06f5e19865c153de0fdb11be3890014df7",
+      "readme_url": "https://github.com/idavidrein/gpqa/blob/56686c06f5e19865c153de0fdb11be3890014df7/README.md",
+      "readme_sha256": "0be2cf410fecf82fb811f02e2314ecc5a19decc1515014498e59bae4680d4d81",
+      "repository_license_url": "https://github.com/idavidrein/gpqa/tree/56686c06f5e19865c153de0fdb11be3890014df7"
+    },
+    {
+      "benchmark_id": "hle",
+      "source_url": "https://github.com/centerforaisafety/hle",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "22ed3074b1e7b134bcbc09028d0ba320839b0655",
+      "readme_url": "https://github.com/centerforaisafety/hle/blob/22ed3074b1e7b134bcbc09028d0ba320839b0655/README.md",
+      "readme_sha256": "fd3bd0049e1a2b39244d8240a63d0ccfe037b0b6e5979d5826e1d1cf4203ee88",
+      "repository_license_url": "https://github.com/centerforaisafety/hle/tree/22ed3074b1e7b134bcbc09028d0ba320839b0655"
+    },
+    {
+      "benchmark_id": "arc-agi-2",
+      "source_url": "https://github.com/arcprize/ARC-AGI-2",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "f3283f727488ad98fe575ea6a5ac981e4a188e49",
+      "readme_url": "https://github.com/arcprize/ARC-AGI-2/blob/f3283f727488ad98fe575ea6a5ac981e4a188e49/readme.md",
+      "readme_sha256": "dec0cfb64aa83fc6659c6b81970ce38fddb30e6c43dc7eb3c6cf746d0142e44c",
+      "repository_license_url": "https://github.com/arcprize/ARC-AGI-2/tree/f3283f727488ad98fe575ea6a5ac981e4a188e49"
+    },
+    {
+      "benchmark_id": "truthfulqa",
+      "source_url": "https://github.com/sylinrl/TruthfulQA",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "d71c110897f5d31c5d7f309e7bc316c152f6f031",
+      "readme_url": "https://github.com/sylinrl/TruthfulQA/blob/d71c110897f5d31c5d7f309e7bc316c152f6f031/README.md",
+      "readme_sha256": "23834ca77c34e909cbdcceeaea89135c65b713a5d0c77be6bced7a637763ea44",
+      "repository_license_url": "https://github.com/sylinrl/TruthfulQA/tree/d71c110897f5d31c5d7f309e7bc316c152f6f031"
+    },
+    {
+      "benchmark_id": "simpleqa",
+      "source_url": "https://github.com/openai/simple-evals",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "652c89d0ca9df547706735883097e9537d40dc47",
+      "readme_url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
+      "readme_sha256": "d9647c4a0e34cd9b2b528ff6986141734aac6f5f2f18a068eeadb2af0b29786f",
+      "repository_license_url": "https://github.com/openai/simple-evals/tree/652c89d0ca9df547706735883097e9537d40dc47"
+    },
+    {
+      "benchmark_id": "humaneval",
+      "source_url": "https://github.com/openai/human-eval",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "6d43fb980f9fee3c892a914eda09951f772ad10d",
+      "readme_url": "https://github.com/openai/human-eval/blob/6d43fb980f9fee3c892a914eda09951f772ad10d/README.md",
+      "readme_sha256": "2649c7f6b03c8aecdc480e4f25333b113e4d89bf819ba911e4a7983adabd12ce",
+      "repository_license_url": "https://github.com/openai/human-eval/tree/6d43fb980f9fee3c892a914eda09951f772ad10d"
+    },
+    {
+      "benchmark_id": "mbpp",
+      "source_url": "https://github.com/google-research/google-research",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "e49bbfe381c9c0e564b937f1c4e163a2273c65cc",
+      "readme_url": "https://github.com/google-research/google-research/blob/e49bbfe381c9c0e564b937f1c4e163a2273c65cc/mbpp/README.md",
+      "readme_sha256": "02d63a4ffdad806c3c87b5ea2aa91e946f6eec0c2869643b09831650883f41be",
+      "repository_license_url": "https://github.com/google-research/google-research/tree/e49bbfe381c9c0e564b937f1c4e163a2273c65cc"
+    },
+    {
+      "benchmark_id": "livecodebench",
+      "source_url": "https://github.com/LiveCodeBench/LiveCodeBench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+      "readme_url": "https://github.com/LiveCodeBench/LiveCodeBench/blob/28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24/README.md",
+      "readme_sha256": "ee0029cddc1d9051f35818f3348a4327819a3e35a9e597732519245605195cf6",
+      "repository_license_url": "https://github.com/LiveCodeBench/LiveCodeBench/tree/28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24"
+    },
+    {
+      "benchmark_id": "humaneval-xl",
+      "source_url": "https://github.com/floatai/HumanEval-XL",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "1e9301f6cfc2d3481a7f7e44569982285238ac99",
+      "readme_url": "https://github.com/floatai/HumanEval-XL/blob/1e9301f6cfc2d3481a7f7e44569982285238ac99/README.md",
+      "readme_sha256": "761bc5f1f02e2a2dd208866ab3bf1cac6fdeceeab64ab7c737f8e9213e083a05",
+      "repository_license_url": "https://github.com/floatai/HumanEval-XL/tree/1e9301f6cfc2d3481a7f7e44569982285238ac99"
+    },
+    {
+      "benchmark_id": "mhumaneval",
+      "source_url": "https://github.com/mraihan-gmu/mHumanEval-Benchmark",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "b4ac5b3f59bb8a9b27fabd2d63080963995b1388",
+      "readme_url": "https://github.com/mraihan-gmu/mHumanEval-Benchmark/blob/b4ac5b3f59bb8a9b27fabd2d63080963995b1388/README.md",
+      "readme_sha256": "2955fb42db4a7c44540aa2701def37ee89f8f834d762c529a80c1c278b2497ec",
+      "repository_license_url": "https://github.com/mraihan-gmu/mHumanEval-Benchmark/tree/b4ac5b3f59bb8a9b27fabd2d63080963995b1388"
+    },
+    {
+      "benchmark_id": "swe-bench",
+      "source_url": "https://github.com/SWE-bench/SWE-bench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "02e7a74ffd0b707aab73d203fe87bdc7c76afc8e",
+      "readme_url": "https://github.com/SWE-bench/SWE-bench/blob/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e/README.md",
+      "readme_sha256": "06841624d7b5130dfe3cc6714642e9a8fd2a608c95c66ae0180e409f12b73aaa",
+      "repository_license_url": "https://github.com/SWE-bench/SWE-bench/tree/02e7a74ffd0b707aab73d203fe87bdc7c76afc8e"
+    },
+    {
+      "benchmark_id": "terminal-bench",
+      "source_url": "https://github.com/harbor-framework/terminal-bench-1",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "d28711d0da2675d0bb1d56de45ae5df6082438a3",
+      "readme_url": "https://github.com/harbor-framework/terminal-bench-1/blob/d28711d0da2675d0bb1d56de45ae5df6082438a3/README.md",
+      "readme_sha256": "c4b77ef934ae210f3c712e7bab30f460ff35e125aa83affc30c9e7dd6317cdf1",
+      "repository_license_url": "https://github.com/harbor-framework/terminal-bench-1/tree/d28711d0da2675d0bb1d56de45ae5df6082438a3"
+    },
+    {
+      "benchmark_id": "bfcl",
+      "source_url": "https://github.com/ShishirPatil/gorilla",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "6ea57973c7a6097fd7c5915698c54c17c5b1b6c8",
+      "readme_url": "https://github.com/ShishirPatil/gorilla/blob/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8/berkeley-function-call-leaderboard/README.md",
+      "readme_sha256": "c6c95683cce9653788c8b3f3f5002d2f5c27b95a1288544fe82c2a2faf5e12d0",
+      "repository_license_url": "https://github.com/ShishirPatil/gorilla/tree/6ea57973c7a6097fd7c5915698c54c17c5b1b6c8"
+    },
+    {
+      "benchmark_id": "tau-bench",
+      "source_url": "https://github.com/sierra-research/tau-bench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "59a200c6d575d595120f1cb70fea53cef0632f6b",
+      "readme_url": "https://github.com/sierra-research/tau-bench/blob/59a200c6d575d595120f1cb70fea53cef0632f6b/README.md",
+      "readme_sha256": "1a4b1b00634fe46fd677dd11dfa25a9bf357b5d7c3d726ff83025e8f104329f9",
+      "repository_license_url": "https://github.com/sierra-research/tau-bench/tree/59a200c6d575d595120f1cb70fea53cef0632f6b"
+    },
+    {
+      "benchmark_id": "browsecomp",
+      "source_url": "https://github.com/openai/simple-evals",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "652c89d0ca9df547706735883097e9537d40dc47",
+      "readme_url": "https://github.com/openai/simple-evals/blob/652c89d0ca9df547706735883097e9537d40dc47/README.md",
+      "readme_sha256": "d9647c4a0e34cd9b2b528ff6986141734aac6f5f2f18a068eeadb2af0b29786f",
+      "repository_license_url": "https://github.com/openai/simple-evals/tree/652c89d0ca9df547706735883097e9537d40dc47"
+    },
+    {
+      "benchmark_id": "gaia",
+      "source_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA",
+      "checked_at": "2026-10-04T02:21:53.185272+00:00",
+      "status": "PUBLIC_DATASET_CARD_OBSERVED_GATED_PAYLOAD_NOT_ACCESSED",
+      "commit_sha": "682dd723ee1e1697e00360edccf2366dc8418dd9",
+      "readme_url": "https://huggingface.co/datasets/gaia-benchmark/GAIA/blob/682dd723ee1e1697e00360edccf2366dc8418dd9/README.md",
+      "readme_sha256": "11cf6e516e795150e15e947f41ba778c00e9e46f793b26d8ae954834ce7ecba9",
+      "repository_license_url": "UNKNOWN"
+    },
+    {
+      "benchmark_id": "webarena",
+      "source_url": "https://github.com/web-arena-x/webarena",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "dce04686a56253aefba7b18a4fa0937cf1dc987b",
+      "readme_url": "https://github.com/web-arena-x/webarena/blob/dce04686a56253aefba7b18a4fa0937cf1dc987b/README.md",
+      "readme_sha256": "081c826497f9b7da4952771ee128c2215ec3532379db0fe9f7fcbd899d9c9287",
+      "repository_license_url": "https://github.com/web-arena-x/webarena/tree/dce04686a56253aefba7b18a4fa0937cf1dc987b"
+    },
+    {
+      "benchmark_id": "osworld-2.x",
+      "source_url": "https://github.com/xlang-ai/OSWorld-V2",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "acdd3493808e716825975b0f0208194bb2faf3c3",
+      "readme_url": "https://github.com/xlang-ai/OSWorld-V2/blob/acdd3493808e716825975b0f0208194bb2faf3c3/README.md",
+      "readme_sha256": "0d1d3e91e8786720a167b8bc26a41bd27832eefae652ab1c166193073e99b2b4",
+      "repository_license_url": "https://github.com/xlang-ai/OSWorld-V2/tree/acdd3493808e716825975b0f0208194bb2faf3c3"
+    },
+    {
+      "benchmark_id": "re-bench",
+      "source_url": "https://github.com/METR/RE-Bench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "93b98062e55f6945d4a7e213a3226dd419896170",
+      "readme_url": "https://github.com/METR/RE-Bench/blob/93b98062e55f6945d4a7e213a3226dd419896170/README.md",
+      "readme_sha256": "7f279f6fcbfa8d6e7309764cd7620f682ffbeaedc5f9af09b8746b9c10bbb2dd",
+      "repository_license_url": "https://github.com/METR/RE-Bench/tree/93b98062e55f6945d4a7e213a3226dd419896170"
+    },
+    {
+      "benchmark_id": "agentbench",
+      "source_url": "https://github.com/THUDM/AgentBench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "d1e4a10db08c87075c78972e48ecc182be03e2d5",
+      "readme_url": "https://github.com/THUDM/AgentBench/blob/d1e4a10db08c87075c78972e48ecc182be03e2d5/README.md",
+      "readme_sha256": "1b7d1f1cd7a74ac9497c639324ec342dd3f8769e9c0c4cd2cd92a4eb6740ac98",
+      "repository_license_url": "https://github.com/THUDM/AgentBench/tree/d1e4a10db08c87075c78972e48ecc182be03e2d5"
+    },
+    {
+      "benchmark_id": "ruler",
+      "source_url": "https://github.com/NVIDIA/RULER",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "c3f5e3b4f87f97e048793bb510a3a6b19a46bf3a",
+      "readme_url": "https://github.com/NVIDIA/RULER/blob/c3f5e3b4f87f97e048793bb510a3a6b19a46bf3a/README.md",
+      "readme_sha256": "f3aae5bbd58fcd7de32aab099c455dd2bbc1da23a2efee9db3071eb9fbf894a3",
+      "repository_license_url": "https://github.com/NVIDIA/RULER/tree/c3f5e3b4f87f97e048793bb510a3a6b19a46bf3a"
+    },
+    {
+      "benchmark_id": "longbench",
+      "source_url": "https://github.com/THUDM/LongBench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "2e00731f8d0bff23dc4325161044d0ed8af94c1e",
+      "readme_url": "https://github.com/THUDM/LongBench/blob/2e00731f8d0bff23dc4325161044d0ed8af94c1e/README.md",
+      "readme_sha256": "7de8f5cec86e49b9a0f3f90bf112e797903bcf93bd458d78c854fec532b08ef1",
+      "repository_license_url": "https://github.com/THUDM/LongBench/tree/2e00731f8d0bff23dc4325161044d0ed8af94c1e"
+    },
+    {
+      "benchmark_id": "mmmu",
+      "source_url": "https://github.com/MMMU-Benchmark/MMMU",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "268471d0d488258990025331c7528359c324aa25",
+      "readme_url": "https://github.com/MMMU-Benchmark/MMMU/blob/268471d0d488258990025331c7528359c324aa25/README.md",
+      "readme_sha256": "a4e89dd389f9b4c82b92e54b5d50a58e55a53c077a5009f7d4b4e53c09bdcc3a",
+      "repository_license_url": "https://github.com/MMMU-Benchmark/MMMU/tree/268471d0d488258990025331c7528359c324aa25"
+    },
+    {
+      "benchmark_id": "video-mme",
+      "source_url": "https://github.com/MME-Benchmarks/Video-MME",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "06c2315b892f88578f81d73205d07cf576f292b9",
+      "readme_url": "https://github.com/MME-Benchmarks/Video-MME/blob/06c2315b892f88578f81d73205d07cf576f292b9/README.md",
+      "readme_sha256": "df3132ed6c4d17c7f47acc0ee832e352185edd9d5b30bacc9a0195e948124668",
+      "repository_license_url": "UNKNOWN"
+    },
+    {
+      "benchmark_id": "harmbench",
+      "source_url": "https://github.com/centerforaisafety/HarmBench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "8e1604d1171fe8a48d8febecd22f600e462bdcdd",
+      "readme_url": "https://github.com/centerforaisafety/HarmBench/blob/8e1604d1171fe8a48d8febecd22f600e462bdcdd/README.md",
+      "readme_sha256": "baae4a0b64b61812e61a162eafb2ed344edbc151f57dd99c4af063e3d0efec5d",
+      "repository_license_url": "https://github.com/centerforaisafety/HarmBench/tree/8e1604d1171fe8a48d8febecd22f600e462bdcdd"
+    },
+    {
+      "benchmark_id": "jailbreakbench",
+      "source_url": "https://github.com/JailbreakBench/jailbreakbench",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "23dbdf6b19650521604456229bc1d9c4156c85c1",
+      "readme_url": "https://github.com/JailbreakBench/jailbreakbench/blob/23dbdf6b19650521604456229bc1d9c4156c85c1/README.md",
+      "readme_sha256": "aa7d1c4154ac4defadb533a7c686a720a808022f24c73763567e028cd5825d8a",
+      "repository_license_url": "https://github.com/JailbreakBench/jailbreakbench/tree/23dbdf6b19650521604456229bc1d9c4156c85c1"
+    },
+    {
+      "benchmark_id": "helm",
+      "source_url": "https://github.com/stanford-crfm/helm",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "63754d05db6f874e41a395880fb573890a13e791",
+      "readme_url": "https://github.com/stanford-crfm/helm/blob/63754d05db6f874e41a395880fb573890a13e791/README.md",
+      "readme_sha256": "465390a907127138096869b49fd79c817392f5404d23d98161d881f2e408a303",
+      "repository_license_url": "https://github.com/stanford-crfm/helm/tree/63754d05db6f874e41a395880fb573890a13e791"
+    },
+    {
+      "benchmark_id": "lm-eval",
+      "source_url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "checked_at": "2026-10-04T02:14:42.116347+00:00",
+      "status": "PUBLIC_REPOSITORY_README_OBSERVED",
+      "commit_sha": "d6de81643928d653435c431bae19945d41d32520",
+      "readme_url": "https://github.com/EleutherAI/lm-evaluation-harness/blob/d6de81643928d653435c431bae19945d41d32520/README.md",
+      "readme_sha256": "57c5cf1db6edb20393ca70851de820898bd8d10424a5a7574f9f566a6f8d70bd",
+      "repository_license_url": "https://github.com/EleutherAI/lm-evaluation-harness/tree/d6de81643928d653435c431bae19945d41d32520"
+    }
+  ]
+}

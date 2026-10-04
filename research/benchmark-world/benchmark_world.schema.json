@@ -1,0 +1,564 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "identity",
+    "world",
+    "task",
+    "worker",
+    "trajectory",
+    "outcome",
+    "failure_analysis",
+    "epistemics"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmark_id",
+        "benchmark_version",
+        "source_region",
+        "provenance"
+      ],
+      "properties": {
+        "benchmark_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "benchmark_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "source_region": {
+          "enum": [
+            "US",
+            "EU",
+            "ASIA",
+            "GLOBAL",
+            "UNKNOWN"
+          ]
+        },
+        "provenance": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "environment_type",
+        "initial_state",
+        "available_tools",
+        "hidden_state",
+        "temporal_rules",
+        "authority_model"
+      ],
+      "properties": {
+        "environment_type": {
+          "enum": [
+            "STATIC",
+            "EXECUTABLE",
+            "REPOSITORY",
+            "TOOL_DB",
+            "WEB",
+            "SHELL_OS",
+            "DESKTOP",
+            "RESEARCH",
+            "INTERACTIVE",
+            "DYNAMIC",
+            "ADVERSARIAL",
+            "SUITE",
+            "UNKNOWN"
+          ]
+        },
+        "initial_state": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "available_tools": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "hidden_state": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "temporal_rules": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "authority_model": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "task_id",
+        "objective",
+        "language",
+        "domain",
+        "constraints",
+        "success_conditions"
+      ],
+      "properties": {
+        "task_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "language": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "domain": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "constraints": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "success_conditions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "worker": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "model",
+        "provider",
+        "model_version",
+        "quantization",
+        "context_strategy",
+        "decoding"
+      ],
+      "properties": {
+        "model": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provider": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "model_version": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "quantization": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "context_strategy": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "decoding": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "trajectory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observations",
+        "actions",
+        "tool_calls",
+        "state_transitions",
+        "human_interventions",
+        "timestamps",
+        "capture_status"
+      ],
+      "properties": {
+        "observations": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "actions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "tool_calls": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "state_transitions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "human_interventions": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "timestamps": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "capture_status": {
+          "enum": [
+            "NOT_RUN",
+            "UNKNOWN",
+            "PARTIAL",
+            "CAPTURED"
+          ]
+        }
+      }
+    },
+    "outcome": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "final_state",
+        "verifier_result",
+        "score",
+        "success",
+        "partial_success",
+        "latency_seconds",
+        "tokens",
+        "retries",
+        "measurement_status",
+        "score_unit"
+      ],
+      "properties": {
+        "final_state": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verifier_result": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "score": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "success": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "partial_success": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "latency_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "tokens": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "retries": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "measurement_status": {
+          "enum": [
+            "NOT_RUN",
+            "UNKNOWN",
+            "PARTIAL",
+            "MEASURED"
+          ]
+        },
+        "score_unit": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "failure_analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary_failure",
+        "contributing_factors"
+      ],
+      "properties": {
+        "primary_failure": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "contributing_factors": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "epistemics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "synthetic_fraction",
+        "contamination_risk",
+        "independent_validation",
+        "confidence",
+        "authorship",
+        "evidence_status"
+      ],
+      "properties": {
+        "synthetic_fraction": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "contamination_risk": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "independent_validation": {
+          "type": "boolean"
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "authorship": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_status": {
+          "enum": [
+            "OWNER_AUTHORED_EXAMPLE",
+            "SOURCE_BACKED",
+            "MEASURED",
+            "UNKNOWN"
+          ]
+        }
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "benchmark.world run ontology",
+  "description": "Owner-authored run contract. Unmeasured numeric and boolean fields remain null. No model score or independent validation is implied.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "outcome": {
+            "properties": {
+              "measurement_status": {
+                "const": "NOT_RUN"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "outcome": {
+            "properties": {
+              "score": {
+                "type": "null"
+              },
+              "success": {
+                "type": "null"
+              },
+              "partial_success": {
+                "type": "null"
+              },
+              "latency_seconds": {
+                "type": "null"
+              },
+              "tokens": {
+                "type": "null"
+              },
+              "retries": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
