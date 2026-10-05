@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:orkestral:rea:ware-contract:1",
+  "title": "REA connector-neutral candidate handoff envelope",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "rea-ware/1"
+    },
+    "ware_id": {
+      "const": "rea"
+    },
+    "source_commit": {
+      "const": "348323dd23360bbac3841a9632ffcd08290566d2"
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "operation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "parameters": {
+          "type": "object"
+        },
+        "target": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "owner_authorized": {
+              "const": true
+            },
+            "immutable_copy": {
+              "const": true
+            }
+          },
+          "required": [
+            "ref",
+            "sha256",
+            "owner_authorized",
+            "immutable_copy"
+          ]
+        },
+        "provider_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "realm_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interface": {
+          "enum": [
+            "cli",
+            "mcp"
+          ]
+        },
+        "effects": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "network": {
+              "const": false
+            },
+            "execute_target": {
+              "const": false
+            },
+            "mutate_target": {
+              "const": false
+            },
+            "provider_temporary_writes": {
+              "const": true
+            }
+          },
+          "required": [
+            "network",
+            "execute_target",
+            "mutate_target",
+            "provider_temporary_writes"
+          ]
+        },
+        "timeout_seconds": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 600
+        }
+      },
+      "required": [
+        "id",
+        "operation",
+        "parameters",
+        "target",
+        "provider_id",
+        "realm_id",
+        "interface",
+        "effects",
+        "timeout_seconds"
+      ]
+    },
+    "result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_RUN",
+            "HOLD",
+            "OBSERVED",
+            "ERROR"
+          ]
+        },
+        "bundle_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bundle_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "provider_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "analysis_profile_sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "environment": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^ev_[0-9a-f]{64}$"
+          },
+          "uniqueItems": true
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "error_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ingest": {
+          "enum": [
+            "NOT_ATTEMPTED",
+            "STAGED_LOCAL"
+          ]
+        },
+        "ingest_receipt": {
+          "type": "null"
+        }
+      },
+      "required": [
+        "status",
+        "bundle_ref",
+        "bundle_sha256",
+        "provider_version",
+        "analysis_profile_sha256",
+        "environment",
+        "evidence_ids",
+        "limitations",
+        "error_code",
+        "ingest",
+        "ingest_receipt"
+      ]
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "runtime_enabled": {
+          "const": false
+        },
+        "alexandria_ingested": {
+          "const": false
+        },
+        "canonical_promoted": {
+          "const": false
+        },
+        "owner_accepted": {
+          "const": false
+        }
+      },
+      "required": [
+        "runtime_enabled",
+        "alexandria_ingested",
+        "canonical_promoted",
+        "owner_accepted"
+      ]
+    }
+  },
+  "required": [
+    "contract_version",
+    "ware_id",
+    "source_commit",
+    "request",
+    "result",
+    "authority"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "result": {
+            "properties": {
+              "status": {
+                "const": "OBSERVED"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "result": {
+            "properties": {
+              "bundle_ref": {
+                "type": "string",
+                "minLength": 1
+              },
+              "bundle_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "provider_version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "analysis_profile_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "environment": {
+                "type": "object",
+                "minProperties": 1
+              },
+              "evidence_ids": {
+                "minItems": 1
+              },
+              "error_code": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "result": {
+            "properties": {
+              "bundle_ref": {
+                "type": "null"
+              },
+              "bundle_sha256": {
+                "type": "null"
+              },
+              "provider_version": {
+                "type": "null"
+              },
+              "analysis_profile_sha256": {
+                "type": "null"
+              },
+              "environment": {
+                "type": "null"
+              },
+              "evidence_ids": {
+                "maxItems": 0
+              },
+              "ingest": {
+                "const": "NOT_ATTEMPTED"
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "contract_version": "rea-ware/1",
+  "ware_id": "rea",
+  "source_commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+  "request": {
+    "id": "synthetic-example-not-dispatched",
+    "operation": "inspect",
+    "parameters": {},
+    "target": {
+      "ref": "fixture:owner-created-benign-sample",
+      "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "owner_authorized": true,
+      "immutable_copy": true
+    },
+    "provider_id": "ghidra",
+    "realm_id": "linux-candidate",
+    "interface": "cli",
+    "effects": {
+      "network": false,
+      "execute_target": false,
+      "mutate_target": false,
+      "provider_temporary_writes": true
+    },
+    "timeout_seconds": 120
+  },
+  "result": {
+    "status": "HOLD",
+    "bundle_ref": null,
+    "bundle_sha256": null,
+    "provider_version": null,
+    "analysis_profile_sha256": null,
+    "environment": null,
+    "evidence_ids": [],
+    "limitations": [
+      "Synthetic contract example; zero digest is a placeholder, not target evidence",
+      "REA-DEPS-001 open; no analysis performed"
+    ],
+    "error_code": "REA-DEPS-001",
+    "ingest": "NOT_ATTEMPTED",
+    "ingest_receipt": null
+  },
+  "authority": {
+    "runtime_enabled": false,
+    "alexandria_ingested": false,
+    "canonical_promoted": false,
+    "owner_accepted": false
+  }
+}

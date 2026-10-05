@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "created_at": "2026-10-05T15:13:14.859042+00:00",
+  "status": "REGISTRY_CANDIDATE_REVIEW_OPEN_RUNTIME_HOLD",
+  "target_repository": "afimeth/Orkestral-TechResearch",
+  "branch": "codex/rea-reverse-engineering-ware",
+  "base_commit": "61ad9e716d0ad3c7a407b625e2d4f006c2b60be9",
+  "source_commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+  "write_scope": "wares/reverse-engineering/rea/ and root README link",
+  "validation": {
+    "status": "PASS",
+    "command": "python -X utf8 wares/reverse-engineering/rea/validate.py",
+    "schemas": 2,
+    "negative_controls": 12,
+    "hashed_files": 10,
+    "diff_check": "PASS"
+  },
+  "source_installation": "NOT_RUN",
+  "analysis": "NOT_RUN",
+  "live_mcp_connection": "NOT_RUN",
+  "independent_review": "NOT_PERFORMED",
+  "owner_review": "OPEN",
+  "alexandria_ingest": "NOT_ATTEMPTED",
+  "canonical_promotion": false,
+  "merge": false,
+  "auto_merge": false,
+  "secrets_published": false,
+  "files": {
+    "README.md": "89de08206ac3926f72672ebab41e77db81b1e2616855a6ba27dd2c0704aeda5d",
+    "wares/reverse-engineering/rea/contract.schema.json": "10d974821928a818bc04547a52546d30b2d6a4346bb6c0bf7e0ba02f5616956b",
+    "wares/reverse-engineering/rea/handoff.example.json": "0975bb75210aff18e023653e70501cf54c5bc2eff24b22d7f67cfff3b87ad470",
+    "wares/reverse-engineering/rea/README.md": "68e660b3bde2ba9d9b43e817f55bed905b1242822e09fe5d68ce8cd64f48725f",
+    "wares/reverse-engineering/rea/registry.json": "c2bbe983fa3d348ea7ab7d56137eadf1e8ebc1175468940d737f74c10603b53e",
+    "wares/reverse-engineering/rea/registry.schema.json": "51031048fc3dd868a49040ee1af1d3eb47bcb9ca4d61d3ed5ba65905a3db1b42",
+    "wares/reverse-engineering/rea/RUNBOOK.md": "7bbbc514da1cb963e83f2b9325205db84b492e66f696e83f3af294daa3a7ca04",
+    "wares/reverse-engineering/rea/security-review.json": "e582cc34425b679df974abecfd3e7ff17c0fdd786c632a42d82f4961f3d67dee",
+    "wares/reverse-engineering/rea/sources.json": "ca6d6e4581bc0516eb7eb9e3edb30d567889ce9ae330d7f8d1c8467c53ccd67f",
+    "wares/reverse-engineering/rea/validate.py": "2e5e8545f84a755a5d049e0aac4c9492503434a63d8474e7b9c6428d78ea2797"
+  },
+  "limitations": [
+    "Metadata registration and candidate contract; not a deployed adapter or canonical state",
+    "Producer validation does not close independent-review requirement"
+  ],
+  "git_identity_note": "The containing commit identifies this receipt; post-publication receipt records remote head separately.",
+  "publication_scan": {
+    "status": "PASS",
+    "scope": "Explicit 11 changed files and PR body; bounded pattern scan and producer content review",
+    "findings": 0
+  }
+}
