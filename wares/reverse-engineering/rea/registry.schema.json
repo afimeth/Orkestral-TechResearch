@@ -1,0 +1,162 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "id": {
+      "const": "rea"
+    },
+    "name": {
+      "type": "string"
+    },
+    "classification": {
+      "const": "Reverse Engineering Ware"
+    },
+    "status": {
+      "const": "REGISTERED_CANDIDATE_RUNTIME_HOLD"
+    },
+    "observed_at": {
+      "type": "string"
+    },
+    "maliyet_basamagi": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "is_katmani": {
+      "enum": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ]
+    },
+    "cost_scope": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "roles": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "REA": {
+          "const": "plug/ware"
+        },
+        "Ghidra": {
+          "const": "analysis provider"
+        },
+        "Hopper": {
+          "const": "analysis provider"
+        },
+        "New4": {
+          "const": "socket/environment"
+        },
+        "Alexandria": {
+          "const": "evidence ingest target"
+        }
+      },
+      "required": [
+        "REA",
+        "Ghidra",
+        "Hopper",
+        "New4",
+        "Alexandria"
+      ]
+    },
+    "integration": {
+      "type": "object"
+    },
+    "interfaces": {
+      "type": "array"
+    },
+    "capabilities": {
+      "type": "array"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "providers": {
+      "type": "array"
+    },
+    "realms": {
+      "type": "object"
+    },
+    "limitations": {
+      "type": "array"
+    },
+    "install_run": {
+      "type": "object"
+    },
+    "update": {
+      "type": "object"
+    },
+    "authority": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "runtime_enabled": {
+          "const": false
+        },
+        "alexandria_ingested": {
+          "const": false
+        },
+        "owner_accepted": {
+          "const": false
+        },
+        "canonical_promoted": {
+          "const": false
+        },
+        "merged": {
+          "const": false
+        },
+        "auto_merge": {
+          "const": false
+        }
+      },
+      "required": [
+        "runtime_enabled",
+        "alexandria_ingested",
+        "owner_accepted",
+        "canonical_promoted",
+        "merged",
+        "auto_merge"
+      ]
+    },
+    "layers": {
+      "type": "object"
+    },
+    "receipt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "id",
+    "name",
+    "classification",
+    "status",
+    "observed_at",
+    "maliyet_basamagi",
+    "is_katmani",
+    "cost_scope",
+    "source",
+    "roles",
+    "integration",
+    "interfaces",
+    "capabilities",
+    "evidence",
+    "providers",
+    "realms",
+    "limitations",
+    "install_run",
+    "update",
+    "authority",
+    "layers",
+    "receipt"
+  ]
+}

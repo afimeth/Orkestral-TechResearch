@@ -1,0 +1,212 @@
+{
+  "observed_at": "2026-10-05T15:13:14.859042+00:00",
+  "repository": "https://github.com/morluto/rea",
+  "source_commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+  "files": [
+    {
+      "id": "license",
+      "path": "LICENSE",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "798f9e4d18e49b30bf2f12696c8ced73dc4e1413da375a333d01281543a1ea8b",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/LICENSE",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 21
+    },
+    {
+      "id": "package",
+      "path": "package.json",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "a61deea13fff033cd7d7442130cf35edcc24daf14c269b905f67ef5745e6a726",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/package.json",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 220
+    },
+    {
+      "id": "lock",
+      "path": "package-lock.json",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "035c670d45f99affb94e9f8fb80797d3efc90368f44d9c01eca307a6e5e1125e",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/package-lock.json",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 5458
+    },
+    {
+      "id": "readme",
+      "path": "README.md",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "cd35cf40572902e623c201b2ca518f344a7481cd86b4e41d416032e07eff6212",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/README.md",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 666
+    },
+    {
+      "id": "security",
+      "path": "SECURITY.md",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "82a0f2535acf6499e58180f53f44456460b36181f1bb3171aebf09499561adcf",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/SECURITY.md",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 47
+    },
+    {
+      "id": "installation",
+      "path": "docs/installation.md",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "dadc0cc3dd7773b91c81873a18204008e395da4f9232d127926d1ff36547b3bc",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/docs/installation.md",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 331
+    },
+    {
+      "id": "windows",
+      "path": "docs/windows-ghidra-p0.md",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "59670c3aba614a4e0bb741f6d6c95fabc8965639f8e4b58ef4647272e9716845",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/docs/windows-ghidra-p0.md",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 165
+    },
+    {
+      "id": "mcp",
+      "path": "docs/mcp-contracts.md",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "2ec794b169f4d5a6390e1e8857306e94a55dbba0f264d106dc73303244c54f8f",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/docs/mcp-contracts.md",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 106
+    },
+    {
+      "id": "entry",
+      "path": "scripts/rea.mjs",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "293fa0e5a2f55194964eb89f50296685ab14827c42cbdf5b72f82f4b867ffeef",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/scripts/rea.mjs",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 77
+    },
+    {
+      "id": "transport",
+      "path": "src/main.ts",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "bb82298d63dcf204bcec31e890399c347aebad20ba053d6a8a797ec80f936afd",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/src/main.ts",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 135
+    },
+    {
+      "id": "evidence",
+      "path": "src/domain/evidence.ts",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "c63aa56b3978644e9601c5b8639fa154478390101891337db5b0b3265fd167a1",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/src/domain/evidence.ts",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 292
+    },
+    {
+      "id": "snapshot",
+      "path": "src/domain/analysisSnapshot.ts",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "a1705bb53262c27ee667b8f1947dbba3ce5b11759c5562953ca602b7e75382b5",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/src/domain/analysisSnapshot.ts",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 433
+    },
+    {
+      "id": "windows_code",
+      "path": "src/ghidra/GhidraProviderCapabilities.ts",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "148db7c5b69e7349584e196ea2a400b1a57750c12c273c26b827768e52a77203",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/src/ghidra/GhidraProviderCapabilities.ts",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 174
+    },
+    {
+      "id": "prepare",
+      "path": "scripts/prepare.mjs",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "b4c0f84e1d2281da2af82380fab1b5f7032be262c2f6d525b402e0ab87e326a4",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/scripts/prepare.mjs",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 28
+    },
+    {
+      "id": "prepack",
+      "path": "scripts/prepack.mjs",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "5c4b14d76c3ad6bfabffd8b436a74b8770485fc14f7415f8f7ed67cc05ebb7fd",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/scripts/prepack.mjs",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 55
+    },
+    {
+      "id": "release_workflow",
+      "path": ".github/workflows/release.yml",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "57da4d890ae016deae92c8719b1fddee0217d4f7e7d557027abfc744d6c50f64",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/.github/workflows/release.yml",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 187
+    },
+    {
+      "id": "cli",
+      "path": "src/cli/coreAnalysisCommands.ts",
+      "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "sha256": "b7548165225529ffc52645129349758d998840795b73318897f0ff5827835dd6",
+      "url": "https://github.com/morluto/rea/blob/348323dd23360bbac3841a9632ffcd08290566d2/src/cli/coreAnalysisCommands.ts",
+      "hash_scope": "raw git blob bytes; not Windows checkout newline conversion",
+      "line_count": 551
+    }
+  ],
+  "commit_signature": {
+    "github_verified": true,
+    "meaning": "GitHub API signature report; not an independent author or safety audit"
+  },
+  "release": {
+    "tag": "rea-agents-3.2.1",
+    "published_at": "2026-10-03T19:58:27Z",
+    "commit": "0356f7677f57898c5291658d7d4995784533ba6d",
+    "url": "https://github.com/morluto/rea/releases/tag/rea-agents-3.2.1"
+  },
+  "npm": {
+    "name": "rea-agents",
+    "version": "3.2.1",
+    "license": "MIT",
+    "git_head": "0356f7677f57898c5291658d7d4995784533ba6d",
+    "tarball_url": "https://registry.npmjs.org/rea-agents/-/rea-agents-3.2.1.tgz",
+    "integrity": "sha512-R+EwNkWiZjJi4cAxnQzwnCC5w+b4GlZoSJ5VNjliyLB4OoDsJyUngJleLuxgtoyyxHF9DFZ5x+JMQags+INPKw==",
+    "tarball_sha256": "aac53b1c16c0fa15e468b5ac5a0978e403977090757b91227204e45433498fbb",
+    "integrity_check": "PASS",
+    "signature_verification": "NOT_PERFORMED",
+    "attestation_verification": "NOT_PERFORMED",
+    "attestation_advertised": {
+      "url": "https://registry.npmjs.org/-/npm/v1/attestations/rea-agents@3.2.1",
+      "provenance": {
+        "predicateType": "https://slsa.dev/provenance/v1"
+      }
+    },
+    "release_git_head_matches_release_target": true,
+    "release_equals_reviewed_main": false
+  },
+  "ci_at_observation": [
+    {
+      "name": "CI",
+      "status": "pending",
+      "conclusion": null,
+      "head_sha": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "url": "https://github.com/morluto/rea/actions/runs/37330212512"
+    },
+    {
+      "name": "Release",
+      "status": "in_progress",
+      "conclusion": null,
+      "head_sha": "348323dd23360bbac3841a9632ffcd08290566d2",
+      "url": "https://github.com/morluto/rea/actions/runs/37330212442"
+    }
+  ],
+  "method": "Read-only static source inspection, public metadata and lockfile audit. No upstream install/build/analysis.",
+  "coverage_limits": [
+    "Selected files only; no exhaustive malicious-code or reachability review",
+    "README/local-first statement is not proof of zero network access",
+    "Release tarball integrity is registry-to-bytes consistency, not source-build reproducibility"
+  ]
+}

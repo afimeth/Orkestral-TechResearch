@@ -1,0 +1,258 @@
+{
+  "schema_version": "1.0",
+  "id": "rea",
+  "name": "REA: Reverse Engineer Anything",
+  "classification": "Reverse Engineering Ware",
+  "status": "REGISTERED_CANDIDATE_RUNTIME_HOLD",
+  "observed_at": "2026-10-05T15:13:14.859042+00:00",
+  "maliyet_basamagi": 5,
+  "is_katmani": "L4",
+  "cost_scope": "Registry preparation in the current Codex session; not REA runtime pricing",
+  "source": {
+    "repository": "https://github.com/morluto/rea",
+    "commit": "348323dd23360bbac3841a9632ffcd08290566d2",
+    "license": "MIT",
+    "package": "rea-agents",
+    "package_version": "3.2.1",
+    "release_commit": "0356f7677f57898c5291658d7d4995784533ba6d",
+    "release_equals_reviewed_source": false,
+    "evidence_file": "sources.json"
+  },
+  "roles": {
+    "REA": "plug/ware",
+    "Ghidra": "analysis provider",
+    "Hopper": "analysis provider",
+    "New4": "socket/environment",
+    "Alexandria": "evidence ingest target"
+  },
+  "integration": {
+    "kind": "connector-neutral registration and boundary contract",
+    "runtime_adapter": "NOT_IMPLEMENTED",
+    "canonical_architecture_claim": false,
+    "ontology_conversion": false,
+    "auto_registration": false,
+    "credential_requirement": "NONE_FOR_REGISTRY",
+    "ingest_endpoint": null,
+    "ingest_schema_compatibility": "UNKNOWN",
+    "contract_file": "contract.schema.json"
+  },
+  "interfaces": [
+    {
+      "id": "cli",
+      "entrypoint": "node scripts/rea.mjs",
+      "mode": "bounded command vector"
+    },
+    {
+      "id": "mcp",
+      "entrypoint": "node scripts/rea.mjs mcp",
+      "transport": "stdio",
+      "discovery": "tools/list plus binary_session.tool_availability; bind actual provider and target"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "native-static",
+      "inputs": [
+        "authorized immutable binary copy",
+        "SHA-256",
+        "provider selection"
+      ],
+      "outputs": [
+        "inventory",
+        "decompilation",
+        "assembly",
+        "xref",
+        "typed Evidence"
+      ],
+      "providers": [
+        "ghidra",
+        "hopper"
+      ],
+      "source_refs": [
+        "installation",
+        "mcp"
+      ],
+      "runtime_validation": "NOT_RUN"
+    },
+    {
+      "id": "artifact-js-managed",
+      "inputs": [
+        "local archive/directory/ASAR",
+        "JavaScript",
+        "managed assembly"
+      ],
+      "outputs": [
+        "artifact graph",
+        "static evidence",
+        "limitations"
+      ],
+      "providers": [
+        "REA specialized providers"
+      ],
+      "source_refs": [
+        "readme",
+        "mcp"
+      ],
+      "runtime_validation": "NOT_RUN"
+    },
+    {
+      "id": "dynamic-observation",
+      "inputs": [
+        "explicit process/scenario",
+        "authorized local CDP target"
+      ],
+      "outputs": [
+        "bounded runtime observations",
+        "process lineage",
+        "evidence"
+      ],
+      "providers": [
+        "browser",
+        "process",
+        "Electron"
+      ],
+      "source_refs": [
+        "mcp"
+      ],
+      "runtime_validation": "NOT_RUN",
+      "default_enabled": false
+    }
+  ],
+  "evidence": {
+    "preserve": [
+      "evidence_id",
+      "subject",
+      "provider",
+      "predicate_type",
+      "operation",
+      "parameters",
+      "raw_result",
+      "normalized_result",
+      "confidence",
+      "authority",
+      "environment",
+      "limitations",
+      "locations",
+      "evidence_links",
+      "analysis_profile when present"
+    ],
+    "confidence_values": [
+      "observed",
+      "derived",
+      "inferred"
+    ],
+    "source_refs": [
+      "evidence",
+      "snapshot"
+    ],
+    "mapping": "Envelope raw REA evidence; preserve namespace and IDs. Never elevate inferred/derived into observed.",
+    "transfer": "Local immutable bundle + SHA-256 + source/provider/environment identity; redact only in a separately hashed derivative.",
+    "ingest": "STAGED_LOCAL until the existing Alexandria writer validates schema and returns a durable acknowledgement; registration is not ingest."
+  },
+  "providers": [
+    {
+      "id": "ghidra",
+      "cost": "free/open-source",
+      "license": "Apache-2.0",
+      "license_ref": "https://github.com/NationalSecurityAgency/ghidra/blob/master/LICENSE",
+      "observed_license_blob": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "required_version": "12.1.4",
+      "jdk": "64-bit full JDK 21",
+      "preferred": true
+    },
+    {
+      "id": "hopper",
+      "cost": "separate commercial license or vendor-limited demo",
+      "license": "PROPRIETARY_SEPARATE",
+      "required_version": null,
+      "preferred": false,
+      "source_refs": [
+        "installation"
+      ]
+    }
+  ],
+  "realms": {
+    "windows": {
+      "status": "UNAVAILABLE_FOR_GHIDRA",
+      "source_refs": [
+        "windows",
+        "windows_code"
+      ],
+      "reason": "Job Object ownership, private DACL and reparse-safe admission absent; no bypass by manual MCP configuration"
+    },
+    "linux": {
+      "status": "DOCUMENTED_NOT_LOCALLY_VALIDATED",
+      "architecture": "x86_64",
+      "distributions": [
+        "Ubuntu 24.04+",
+        "Fedora 41+",
+        "64-bit Arch"
+      ],
+      "node": "^22.19.0 || >=24.11.0"
+    },
+    "wsl2": {
+      "status": "DESIGNED_NOT_ACCEPTED",
+      "route": "Windows surface -> Linux-local REA + Ghidra -> hashed bundle -> local Alexandria staging",
+      "limits": [
+        "WSL2 is not hostile-target containment by itself",
+        "Use Linux filesystem, not /mnt/c, for analysis workspace",
+        "Use Linux-native Node/Java/Ghidra; Windows PATH fallthrough is not readiness",
+        "Windows process/browser observation does not become supported through WSL",
+        "Hostile inputs require separately verified isolation with no host or credential mounts"
+      ]
+    }
+  },
+  "limitations": [
+    "REA is not a sandbox",
+    "Provider output is not original source recovery",
+    "Local analysis can still disclose evidence through a connected cloud agent",
+    "License does not authorize every target or remove third-party obligations",
+    "Published 3.2.1 and reviewed main commit differ",
+    "Production dependency advisories keep runtime on HOLD"
+  ],
+  "install_run": {
+    "runbook": "RUNBOOK.md",
+    "policy": "pinned source, explicit provider, no latest/curl-pipe/global setup",
+    "status": "NOT_RUN",
+    "runtime_gate": "HOLD",
+    "allowed_now": [
+      "metadata validation",
+      "static source review",
+      "read-only host preflight"
+    ]
+  },
+  "update": {
+    "mode": "manual reviewed branch/PR; no auto-upgrade",
+    "identity": [
+      "source commit",
+      "lock SHA-256",
+      "package integrity",
+      "provider version",
+      "Node/JDK",
+      "realm",
+      "contract version"
+    ],
+    "invalidate_on": [
+      "identity change",
+      "new security advisory",
+      "target digest change",
+      "operation/parameters/profile change"
+    ],
+    "action": "Mark prior affected readiness stale; preserve historical receipts; re-audit, re-validate schema and benign fixture; independent review before releasing HOLD"
+  },
+  "authority": {
+    "runtime_enabled": false,
+    "alexandria_ingested": false,
+    "owner_accepted": false,
+    "canonical_promoted": false,
+    "merged": false,
+    "auto_merge": false
+  },
+  "layers": {
+    "L1": "Offline schema, source-pin and integrity validation provided",
+    "L2": "No worker runtime invoked; upstream REA execution held",
+    "L3": "Independent review absent; review remains OPEN",
+    "L4": "Producer proposes metadata registration; owner acceptance remains OPEN"
+  },
+  "receipt": "receipt.json"
+}
