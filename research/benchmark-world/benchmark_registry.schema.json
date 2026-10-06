@@ -16,7 +16,8 @@
     "assurance",
     "documentation_evidence",
     "public_artifacts",
-    "source_caveats"
+    "source_caveats",
+    "review_refs"
   ],
   "properties": {
     "benchmark_id": {
@@ -123,7 +124,9 @@
       "required": [
         "candidate_fields",
         "status",
-        "raw_payload_vendored"
+        "raw_payload_vendored",
+        "documented_fields",
+        "documented_fields_status"
       ],
       "properties": {
         "candidate_fields": {
@@ -139,6 +142,17 @@
         },
         "raw_payload_vendored": {
           "const": false
+        },
+        "documented_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "documented_fields_status": {
+          "type": "string",
+          "minLength": 1
         }
       }
     },
@@ -151,7 +165,8 @@
         "redistribution_permission",
         "raw_vendoring_allowed",
         "repository_license_status",
-        "note"
+        "note",
+        "dataset_license_status"
       ],
       "properties": {
         "repository_spdx": {
@@ -176,6 +191,15 @@
         "note": {
           "type": "string",
           "minLength": 1
+        },
+        "dataset_license_status": {
+          "enum": [
+            "LICENSE_DECLARED",
+            "LICENSE_SCOPE_UNKNOWN",
+            "NO_SINGLE_DATASET",
+            "CC_VARIANT_UNSPECIFIED",
+            "UNKNOWN"
+          ]
         }
       }
     },
@@ -311,6 +335,15 @@
       "type": "array",
       "items": {
         "type": "string"
+      }
+    },
+    "review_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
       }
     }
   },

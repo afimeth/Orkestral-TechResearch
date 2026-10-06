@@ -33,6 +33,9 @@ grant rights to upstream assets or provide legal clearance.
 | `validate.py` | Schema, coverage, taxonomy, provenance and rejection checks |
 | `catalog.md` | Human-readable projection of the registry |
 | `source_observations.json` | Source hashes and inspection scope |
+| `source_reviews.jsonl` | Supplemental dataset-card and repository declaration observations |
+| `source_review.schema.json` | Strict schema for those source reviews |
+| `project_catalog.py` | Regenerate catalog and observation projections from local metadata |
 
 The ontology preserves identity, world, task, worker, trajectory, outcome,
 failure analysis and epistemics. `UNKNOWN` denotes an unchecked textual fact;
@@ -88,12 +91,33 @@ require upstream benchmark runtimes, model credentials or network access.
 python research/benchmark-world/validate.py
 ```
 
-Validation checks both schemas, all rows, required benchmark coverage, taxonomy
+Validation checks all three schemas, catalog and review rows, required benchmark coverage, taxonomy
 references, immutable source links, null `NOT_RUN` measurements and malformed
 record rejection. Structural validation is self-validation, not independent
 semantic, empirical or legal review. Source observation time and source revision
 are stored in the registry; later updates must re-observe sources and preserve
 version distinctions rather than silently replacing provenance.
+
+Supplemental reviews bind dataset declarations and documented field identifiers
+to their own source revisions and hashes. They preserve the original catalog's
+documentation provenance. `LICENSE_DECLARED` records an upstream declaration;
+`LICENSE_SCOPE_UNKNOWN` leaves repository versus dataset scope unresolved, and
+`CC_VARIANT_UNSPECIFIED` leaves the exact Creative Commons terms unresolved.
+Framework entries use `NO_SINGLE_DATASET`; component permissions still need
+separate review. A declared license does not change `raw_vendoring_allowed` or
+establish `redistribution_permission` for associated assets.
+
+`documented_fields` contains identifiers observed in public cards or harness
+documentation. Card feature lists can vary by configuration; the stored union is
+not a universal row schema. Payload schemas, samples and media were not fetched
+or validated. Candidate semantic fields remain separate from these identifiers.
+
+To regenerate the local projections after editing metadata:
+
+```text
+python research/benchmark-world/project_catalog.py
+python research/benchmark-world/validate.py
+```
 
 This is a reviewable research candidate on a dedicated branch. Owner review,
 merge, adoption and any operational deployment are separate decisions.

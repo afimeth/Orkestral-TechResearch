@@ -1,0 +1,128 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "review_id",
+    "benchmark_id",
+    "checked_at",
+    "asset_scope",
+    "document_url",
+    "revision",
+    "document_sha256",
+    "observation_status",
+    "declared_license",
+    "license_status",
+    "documented_fields",
+    "field_scope",
+    "notes",
+    "dataset_payload_accessed",
+    "independent_third_party_validation"
+  ],
+  "properties": {
+    "review_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "checked_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "asset_scope": {
+      "enum": [
+        "DATASET_CARD",
+        "REPOSITORY_LICENSE",
+        "REPOSITORY_README",
+        "CODE_HARNESS",
+        "FRAMEWORK_POLICY"
+      ]
+    },
+    "document_url": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "pattern": "^(UNKNOWN|[a-f0-9]{40})$"
+    },
+    "document_sha256": {
+      "type": "string",
+      "pattern": "^(UNKNOWN|[a-f0-9]{64})$"
+    },
+    "observation_status": {
+      "enum": [
+        "OBSERVED",
+        "UNAVAILABLE"
+      ]
+    },
+    "declared_license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "license_status": {
+      "enum": [
+        "LICENSE_DECLARED",
+        "LICENSE_SCOPE_UNKNOWN",
+        "NO_SINGLE_DATASET",
+        "CC_VARIANT_UNSPECIFIED",
+        "UNKNOWN"
+      ]
+    },
+    "documented_fields": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "field_scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "dataset_payload_accessed": {
+      "const": false
+    },
+    "independent_third_party_validation": {
+      "const": false
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Supplemental public source review",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "observation_status": {
+            "const": "OBSERVED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "revision": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{40}$"
+          },
+          "document_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "document_url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    }
+  ]
+}
