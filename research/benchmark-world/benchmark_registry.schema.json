@@ -1,0 +1,352 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "benchmark_id",
+    "name",
+    "benchmark_version",
+    "record_kind",
+    "environment_type",
+    "capabilities",
+    "failure_classes",
+    "source_projection",
+    "available_public_data_fields",
+    "license_reuse",
+    "provenance",
+    "assurance",
+    "documentation_evidence",
+    "public_artifacts",
+    "source_caveats",
+    "review_refs"
+  ],
+  "properties": {
+    "benchmark_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "benchmark_version": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "record_kind": {
+      "enum": [
+        "BENCHMARK",
+        "FRAMEWORK"
+      ]
+    },
+    "environment_type": {
+      "enum": [
+        "STATIC",
+        "EXECUTABLE",
+        "REPOSITORY",
+        "TOOL_DB",
+        "WEB",
+        "SHELL_OS",
+        "DESKTOP",
+        "RESEARCH",
+        "INTERACTIVE",
+        "DYNAMIC",
+        "ADVERSARIAL",
+        "SUITE",
+        "UNKNOWN"
+      ]
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "failure_classes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_projection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "region",
+        "region_status",
+        "description",
+        "classification",
+        "note"
+      ],
+      "properties": {
+        "region": {
+          "enum": [
+            "US",
+            "EU",
+            "ASIA",
+            "GLOBAL",
+            "UNKNOWN"
+          ]
+        },
+        "region_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "classification": {
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "available_public_data_fields": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_fields",
+        "status",
+        "raw_payload_vendored",
+        "documented_fields",
+        "documented_fields_status"
+      ],
+      "properties": {
+        "candidate_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_payload_vendored": {
+          "const": false
+        },
+        "documented_fields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "documented_fields_status": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "license_reuse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_spdx",
+        "dataset_license",
+        "redistribution_permission",
+        "raw_vendoring_allowed",
+        "repository_license_status",
+        "note",
+        "dataset_license_status"
+      ],
+      "properties": {
+        "repository_spdx": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "redistribution_permission": {
+          "type": "string",
+          "minLength": 1
+        },
+        "raw_vendoring_allowed": {
+          "const": false
+        },
+        "repository_license_status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dataset_license_status": {
+          "enum": [
+            "LICENSE_DECLARED",
+            "LICENSE_SCOPE_UNKNOWN",
+            "NO_SINGLE_DATASET",
+            "CC_VARIANT_UNSPECIFIED",
+            "UNKNOWN"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_url",
+        "checked_at",
+        "status",
+        "commit_sha",
+        "readme_url",
+        "readme_sha256",
+        "repository_license_url"
+      ],
+      "properties": {
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "checked_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "status": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit_sha": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readme_url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "readme_sha256": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_license_url": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "assurance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "concept_origin",
+        "normalization",
+        "evidence_backed",
+        "independent_third_party_validation",
+        "capability_mapping",
+        "scores_measured_here"
+      ],
+      "properties": {
+        "concept_origin": {
+          "const": "OWNER_AUTHORED"
+        },
+        "normalization": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_backed": {
+          "type": "boolean"
+        },
+        "independent_third_party_validation": {
+          "const": false
+        },
+        "capability_mapping": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scores_measured_here": {
+          "const": false
+        }
+      }
+    },
+    "documentation_evidence": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "line_start",
+          "line_end",
+          "claim_scope"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "line_start": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "line_end": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "claim_scope": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "public_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "url",
+          "status"
+        ],
+        "properties": {
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "source_caveats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "review_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Benchmark catalog row"
+}

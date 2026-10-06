@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "identity": {
+    "benchmark_id": "humaneval",
+    "benchmark_version": "UNKNOWN",
+    "source_region": "UNKNOWN",
+    "provenance": [
+      "https://github.com/openai/human-eval"
+    ]
+  },
+  "world": {
+    "environment_type": "EXECUTABLE",
+    "initial_state": "UNKNOWN",
+    "available_tools": [],
+    "hidden_state": [],
+    "temporal_rules": "UNKNOWN",
+    "authority_model": "UNKNOWN"
+  },
+  "task": {
+    "task_id": "EXAMPLE_NOT_RUN",
+    "objective": "Illustrate a run record without fabricating measurements",
+    "language": "UNKNOWN",
+    "domain": "code_generation",
+    "constraints": [
+      "No execution recorded"
+    ],
+    "success_conditions": [
+      "UNKNOWN"
+    ]
+  },
+  "worker": {
+    "model": "UNKNOWN",
+    "provider": "UNKNOWN",
+    "model_version": "UNKNOWN",
+    "quantization": "UNKNOWN",
+    "context_strategy": "UNKNOWN",
+    "decoding": "UNKNOWN"
+  },
+  "trajectory": {
+    "observations": [],
+    "actions": [],
+    "tool_calls": [],
+    "state_transitions": [],
+    "human_interventions": [],
+    "timestamps": [],
+    "capture_status": "NOT_RUN"
+  },
+  "outcome": {
+    "final_state": "UNKNOWN",
+    "verifier_result": "NOT_RUN",
+    "score": null,
+    "success": null,
+    "partial_success": null,
+    "latency_seconds": null,
+    "tokens": null,
+    "retries": null,
+    "measurement_status": "NOT_RUN",
+    "score_unit": "UNKNOWN"
+  },
+  "failure_analysis": {
+    "primary_failure": "UNKNOWN",
+    "contributing_factors": []
+  },
+  "epistemics": {
+    "synthetic_fraction": null,
+    "contamination_risk": "UNKNOWN",
+    "independent_validation": false,
+    "confidence": null,
+    "authorship": "OWNER_DIRECTED_AI_ASSISTED",
+    "evidence_status": "OWNER_AUTHORED_EXAMPLE"
+  }
+}
